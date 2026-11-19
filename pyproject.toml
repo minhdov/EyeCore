@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eyecore"
+version = "0.1.0"
+description = "A lightweight AI integration framework by EyeCode Tech"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["typer>=0.12,<1", "PyYAML>=6,<7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+eyecore = "eyecore.cli:app"
+
+[tool.setuptools.packages.find]
+include = ["eyecore*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

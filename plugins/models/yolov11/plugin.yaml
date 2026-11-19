@@ -1,0 +1,11 @@
+name: yolov11
+type: model
+description: Ultralytics YOLO11n CPU detection in an independent environment; exports image results or chronological video detections.
+runtime:
+  type: python
+  executable: "${YOLOV11_PYTHON:-{root}/.cache/yolov11/venv/bin/python}"
+execution:
+  working_dir: .
+  command:
+    - "{python}"
+    - predict.py

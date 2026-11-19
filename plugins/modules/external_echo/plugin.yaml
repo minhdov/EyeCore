@@ -1,0 +1,9 @@
+name: external_echo
+type: module
+description: Runnable example of using an external repository with its own Python executable.
+runtime:
+  type: python
+  executable: "${EXTERNAL_PYTHON}"
+execution:
+  working_dir: "${EXTERNAL_REPO}"
+  command: ["{python}", "echo_module.py"]

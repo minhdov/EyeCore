@@ -1,0 +1,11 @@
+name: object_tracking_pipeline
+type: module
+description: Runs the surveillance project's in-memory YOLO11 and ByteTrack composition in one Python process.
+runtime:
+  type: python
+  executable: "${YOLOV11_PYTHON:-{root}/.cache/yolov11/venv/bin/python}"
+execution:
+  working_dir: "{root}/projects/surveillance/yolo11_bytetrack"
+  command:
+    - "{python}"
+    - run.py

@@ -1,0 +1,3 @@
+name: object_tracking
+steps:
+  - plugin: object_tracking_pipeline

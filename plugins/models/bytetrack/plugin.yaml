@@ -1,0 +1,15 @@
+name: bytetrack
+type: model
+description: Ultralytics ByteTrack over chronological detection JSON; shares the independent YOLO11 environment.
+runtime:
+  type: python
+  executable: "${YOLOV11_PYTHON:-{root}/.cache/yolov11/venv/bin/python}"
+execution:
+  working_dir: .
+  command:
+    - "{python}"
+    - track.py
+    - --input
+    - "{root}/outputs/object_tracking/detections/video_detections.json"
+    - --output
+    - "{root}/outputs/object_tracking/tracking"

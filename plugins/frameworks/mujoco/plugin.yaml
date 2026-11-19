@@ -1,0 +1,13 @@
+name: mujoco
+type: framework
+description: Headless MuJoCo pendulum simulation in an independent Python environment; exports final state as JSON.
+runtime:
+  type: python
+  executable: "${MUJOCO_PYTHON:-{root}/.cache/mujoco/venv/bin/python}"
+execution:
+  working_dir: .
+  command:
+    - "{python}"
+    - simulate.py
+    - --output
+    - "{root}/outputs/mujoco/result.json"

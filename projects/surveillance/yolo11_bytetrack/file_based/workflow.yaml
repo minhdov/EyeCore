@@ -1,0 +1,13 @@
+name: object_tracking_file
+steps:
+  - plugin: yolov11
+    args:
+      - --video
+      - --source
+      - "${SURVEILLANCE_VIDEO:-{root}/.cache/surveillance/short.avi}"
+      - --conf
+      - "0.1"
+      - --output
+      - "{root}/outputs/object_tracking/detections"
+  - plugin: bytetrack
+    args: [--save-video]

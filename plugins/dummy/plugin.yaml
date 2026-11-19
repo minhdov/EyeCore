@@ -1,0 +1,9 @@
+name: dummy
+type: module
+description: Standalone Python module for validating manifest-only integration.
+runtime:
+  type: python
+  executable: "${DUMMY_PYTHON:-{root}/.venv/bin/python}"
+execution:
+  working_dir: .
+  command: ["{python}", "dummy.py"]
