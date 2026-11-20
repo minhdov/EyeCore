@@ -1,0 +1,3 @@
+[submodule "plugins/models/sam3/source"]
+	path = plugins/models/sam3/source
+	url = https://github.com/minhdov/sam3.git
